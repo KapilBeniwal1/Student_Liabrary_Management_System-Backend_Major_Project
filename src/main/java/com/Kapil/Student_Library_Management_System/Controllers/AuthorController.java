@@ -1,10 +1,10 @@
-package com.example.Student_Library_Management_System.Controllers;
+package com.Kapil.Student_Library_Management_System.Controllers;
 
 
-import com.example.Student_Library_Management_System.DTOs.AuthorEntryDto;
-import com.example.Student_Library_Management_System.DTOs.AuthorResponseDto;
-import com.example.Student_Library_Management_System.Models.Author;
-import com.example.Student_Library_Management_System.Services.AuthorService;
+import com.Kapil.Student_Library_Management_System.DTOs.AuthorEntryDto;
+import com.Kapil.Student_Library_Management_System.DTOs.AuthorResponseDto;
+import com.Kapil.Student_Library_Management_System.Models.Author;
+import com.Kapil.Student_Library_Management_System.Services.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
