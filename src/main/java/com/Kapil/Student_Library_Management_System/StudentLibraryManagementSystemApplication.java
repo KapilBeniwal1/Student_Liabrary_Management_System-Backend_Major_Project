@@ -1,13 +1,13 @@
-package com.Kapil.StudentLiabraryManagementSystem;
+package com.Kapil.Student_Library_Management_System;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentLiabraryManagementSystemApplication {
+public class StudentLibraryManagementSystemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentLiabraryManagementSystemApplication.class, args);
+		SpringApplication.run(StudentLibraryManagementSystemApplication.class, args);
 	}
 
 }

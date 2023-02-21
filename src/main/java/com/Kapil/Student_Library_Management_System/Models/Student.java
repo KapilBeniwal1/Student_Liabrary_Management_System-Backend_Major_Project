@@ -1,13 +1,14 @@
-package com.Kapil.StudentLiabraryManagementSystem.Models;
+package com.Kapil.Student_Library_Management_System.Models;
+
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="student_db")
+@Table(name="student")
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto generate/increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
@@ -15,22 +16,31 @@ public class Student {
     @Column(unique = true)
     private String email;
 
-    private int mobNo;
+    private String mobNo;
 
     private int age;
 
     private String country;
 
 
-    //name of the variable of the parent entity that you have written in child class foreign key attribute
-    //Bi-directional mapping
+    //Plain syntax for bidirectional mapping
+
+    //Name of variable of the Parent Entity that you have written in child class foreign key attr.
     @OneToOne(mappedBy = "studentVariableName",cascade = CascadeType.ALL)
     private Card card;
+    /*
+        Steps to find that variable
 
+        1. Go the child class (In this case)
+        2. Out of all the attributes select the foreign key attribute that is helping you connect
+        with parent class
+        (Ref :  @OneToOne
+                @JoinColumn
+                private Student studentVariableName;
+        )
+        3. Choose the variable name of the parentEnty (reference : studentVariableName)
+     */
 
-    public Student(){  //Default constructor
-
-    }
 
     public Card getCard() {
         return card;
@@ -38,6 +48,9 @@ public class Student {
 
     public void setCard(Card card) {
         this.card = card;
+    }
+
+    public Student() {
     }
 
     public int getId() {
@@ -64,11 +77,11 @@ public class Student {
         this.email = email;
     }
 
-    public int getMobNo() {
+    public String getMobNo() {
         return mobNo;
     }
 
-    public void setMobNo(int mobNo) {
+    public void setMobNo(String mobNo) {
         this.mobNo = mobNo;
     }
 
